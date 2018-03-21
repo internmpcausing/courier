@@ -91,7 +91,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   next(){
-    console.log('next click');
+    console.log('next clicked');
   }
 
   back(){
