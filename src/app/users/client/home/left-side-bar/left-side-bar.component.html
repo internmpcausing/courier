@@ -1,0 +1,31 @@
+<div fxFlexFill fxLayout="column">
+  <div fxFlex="50px" fxLayout="row" class="mat-elevation-z5 header">
+    <div fxFlex class="breadcrumb"><span>1. Route</span></div>
+    <div fxFlex class="breadcrumb"><span>2. Services</span></div>
+    <div fxFlex class="breadcrumb"><span>3. Price</span></div>
+  </div>
+  <div fxFLex="50px">
+    <mat-card>
+      <mat-card-content>
+
+          <mat-form-field class="full-width-input">
+            <input matInput placeholder="From" id="autocompleteInputFrom" [ngModel]="directions.origin">
+            <mat-error>This filed is required</mat-error>
+          </mat-form-field>
+
+          <mat-form-field class="full-width-input">
+            <input matInput placeholder="To" id="autocompleteInputTo" [ngModel]="directions.destination">
+            <mat-error>This filed is required</mat-error>
+          </mat-form-field>
+
+
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <div fxFlex class="button-container">
+    <button mat-raised-button color="accent" (click)="onNext()">Back</button>
+    <button mat-raised-button color="primary" (click)="onNext()">Next</button>
+  </div>
+
+
+</div>

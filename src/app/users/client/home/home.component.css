@@ -1,0 +1,12 @@
+:host{
+    flex: 1 1 1e-09px;
+    box-sizing: border-box;
+}
+/* 
+.left-side-bar{
+    background-color: green;
+} */
+
+.content{
+    background-color: yellow;
+}

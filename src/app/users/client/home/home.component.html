@@ -1,0 +1,25 @@
+<div fxFlexFill fxLayout="row">
+  <!-- <app-left-side-bar fxFlex="400px" class="left-side-bar" 
+  (typingFrom)="typingFrom($event)"  
+  (typingTo)="typingTo($event)"
+  (optionFromSelected)="optionFromSelected($event)"
+  (optionToSelected)="optionToSelected($event)"  
+  [placeSuggestions]="placeSuggestions$ | async"></app-left-side-bar> -->
+
+  <app-left-side-bar 
+    fxFlex="400px" 
+    class="left-side-bar" 
+    [directions]="directionsModel"
+    (next)="next()"
+    (back)="back()"
+    ></app-left-side-bar>
+
+  <app-map 
+    fxFlex class="content" 
+    [directions]="directions$ | async"
+    (dragEndOrigin)="dragEndOrigin($event)"
+    (dragEndDestination)="dragEndDestination($event)"
+  ></app-map>
+</div>
+
+

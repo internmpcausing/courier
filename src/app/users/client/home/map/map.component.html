@@ -1,0 +1,34 @@
+<agm-map 
+  [latitude]="lat" 
+  [longitude]="lng"
+  [zoom]="mapZoomLevel"
+  [disableDefaultUI]="true"
+  [zoomControl]="false"
+  [usePanning]="true"
+  fxFlexFill>
+
+  <agm-marker *ngIf="directions.origin"
+  [latitude]="directions.origin.lat"
+  [longitude]="directions.origin.lng"
+  [markerDraggable]="true"
+  (dragEnd)="onDragEndOrigin($event)"
+  ></agm-marker>
+
+  <agm-marker *ngIf="directions.destination"
+  [latitude]="directions.destination.lat"
+  [longitude]="directions.destination.lng"
+  [markerDraggable]="true"
+  (dragEnd)="onDragEndDestination($event)"
+  ></agm-marker>
+
+  <agm-direction 
+    *ngIf="directions.origin && directions.destination" 
+    [origin]="directions.origin" 
+    [destination]="directions.destination"
+    [renderOptions]="{
+      suppressMarkers: true,
+      polylineOptions:{strokeColor: '#7266c8', strokeWeight: 8}
+    }">
+  </agm-direction>
+
+</agm-map>
