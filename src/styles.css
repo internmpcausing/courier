@@ -7,3 +7,8 @@ html, body{
     margin: 0;
     padding: 0;
 }
+
+app-left-side-bar .mat-tab-body-wrapper{
+    flex: 1 1 1e-09px;
+    box-sizing: border-box;
+}

@@ -10,7 +10,8 @@ export class AuthService {
 
   isLoggedIn(router: Router, url, resolve){
     router.config = [];
-    router.config.unshift({ path: '', loadChildren: 'app/users/client/client.module#ClientModule' });
+    // router.config.unshift({ path: '', loadChildren: 'app/users/client/client.module#ClientModule' });
+    router.config.unshift({ path: '', loadChildren: 'app/users/admin/admin.module#AdminModule' });
     router.navigate([url]);
     resolve(false);
   }

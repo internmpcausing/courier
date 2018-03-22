@@ -14,6 +14,7 @@ import {
   MatMenuModule,
   MatCheckboxModule,
   MatCardModule,
+  MatTabsModule,
   MatAutocompleteModule} from '@angular/material';
 
 
@@ -33,6 +34,7 @@ import {
     MatAutocompleteModule,
     MatCardModule,
     MatCheckboxModule,
+    MatTabsModule
   ],
   exports: [
     MatInputModule,
@@ -47,7 +49,8 @@ import {
     MatListModule,
     MatAutocompleteModule,
     MatCardModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatTabsModule
   ],
   declarations: []
 })

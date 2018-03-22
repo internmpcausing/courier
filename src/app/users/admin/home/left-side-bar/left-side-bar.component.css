@@ -1,0 +1,21 @@
+.container{
+    border-right: solid 1px #a7a7a7;
+}
+
+.button-container{
+    padding: 10px;
+}
+
+.button-container button{
+    width: 100%;
+}
+
+.checkbox-container{
+    align-items: center;
+    margin-top: 10px;
+}
+
+.checkbox-container span{
+    margin-top: 5px;
+    font-size: 12px;
+}

@@ -1,6 +1,7 @@
 
 
 
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -10,7 +11,9 @@ import { AuthGuard } from './guard/auth.guard';
 import { AuthService } from './services/auth.service';
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
+import { AdminModule } from './users/admin/admin.module';
 import { ClientModule } from './users/client/client.module';
+
 
 
 @NgModule({
@@ -25,6 +28,7 @@ import { ClientModule } from './users/client/client.module';
     HttpClientModule,
     RouterModule.forRoot([
       { path: '**', canActivate: [AuthGuard], component: AppComponent},
+      { path: '', loadChildren: 'app/users/admin/admin.module#AdminModule' },
       { path: '', loadChildren: 'app/users/client/client.module#ClientModule' }
     ])
 

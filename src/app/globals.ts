@@ -10,11 +10,6 @@ export class MyGlobals{
     static googleApiKey = 'AIzaSyCuxTc1zAmpV2lxGKQkHud1TzrcXyzWasY';
 }
 
-// export const serverAddress = Object.freeze({
-//     BASE_API_URL: 'http://example.com/',
-//     //... more of your variables
-// });
-
 
 
 export function ProperCase(str){
